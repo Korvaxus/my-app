@@ -1,29 +1,39 @@
-.App {
-  text-align: center;
-  padding: 20px;
-  font-family: 'Arial', sans-serif;
-  background: #f0f0f0;
-  height: 100vh;
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f0f0f0;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: relative;
+  height: 100vh;
+  margin: 0;
+}
+
+.App {
+  text-align: center;
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 400px;
+  width: 100%;
 }
 
 .notification {
-  position: absolute;
-  top: 20px;
-  padding: 10px 20px;
-  background-color: #4CAF50;
+  background-color: #4caf50;
   color: white;
-  border-radius: 4px;
-  font-size: 1em;
+  padding: 10px;
+  border-radius: 5px;
+  position: fixed;
+  top: 20px;
+  z-index: 1000;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 h1 {
   color: #333;
-  font-size: 2.5em;
+  font-size: 2.2em;
   margin-bottom: 20px;
 }
 
@@ -36,7 +46,6 @@ h1 {
 
 .task-input {
   padding: 10px;
-  margin-right: 10px;
   width: 250px;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -46,41 +55,47 @@ h1 {
 .add-task-button {
   padding: 10px 20px;
   cursor: pointer;
-  background-color: #4CAF50;
+  background-color: #007bff;
   color: white;
   border: none;
   border-radius: 4px;
   font-size: 1em;
+  margin-left: 10px;
   transition: background-color 0.3s;
 }
 
 .add-task-button:hover {
-  background-color: #45a049;
+  background-color: #0056b3;
 }
 
 ul {
   list-style-type: none;
   padding: 0;
-  width: 300px;
+  margin: 0;
 }
 
 li {
   margin: 10px 0;
   padding: 10px;
-  background: #fff;
-  border: 1px solid #ccc;
+  background: #f9f9f9;
+  border: 1px solid #ddd;
   border-radius: 4px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transition: background-color 0.3s;
 }
 
 li:nth-child(even) {
-  background: #f9f9f9;
+  background: #fff;
+}
+
+li:hover {
+  background-color: #f1f1f1;
 }
 
 li button {
-  background-color: #f44336;
+  background-color: #ff4b4b;
   color: white;
   border: none;
   padding: 5px 10px;

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import TaskInput from './TaskInput';
 import TaskList from './TaskList';
+import './App.css'; // Import the CSS file
 
 function App() {
   // State to hold the list of tasks
